@@ -11,4 +11,5 @@ var RegisterBlogRoutes = func(router *mux.Router) {
 	router.HandleFunc("/api/blogs", controllers.CreateBlog).Methods("POST")
 	router.HandleFunc("/api/blogs/{id}", controllers.UpdateBlog).Methods("PUT")
 	router.HandleFunc("/api/blogs/{id}", controllers.DeleteBlog).Methods("DELETE")
+	router.HandleFunc("/api/blogs/category/{category}", controllers.GetByCategory).Methods("GET")
 }

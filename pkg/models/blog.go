@@ -44,3 +44,9 @@ func DeleteBlogById(Id int64) Blog {
 	db.Where("ID = ?", Id).Delete(Blog)
 	return Blog
 }
+
+func GetByCategory(category string) []Blog {
+	var Blogs []Blog
+	db.Where("category = ?", category).Find(&Blogs)
+	return Blogs
+}

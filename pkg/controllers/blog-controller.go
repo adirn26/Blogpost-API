@@ -92,3 +92,13 @@ func DeleteBlog(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
 }
+
+func GetByCategory(w http.ResponseWriter, r *http.Request) {
+	vars := mux.Vars(r)
+	Category := vars["category"]
+	BlogDetails := models.GetByCategory(Category)
+	res, _ := json.Marshal(BlogDetails)
+	w.Header().Set("Content-Type", "pkglication/json")
+	w.WriteHeader(http.StatusOK)
+	w.Write(res)
+}
