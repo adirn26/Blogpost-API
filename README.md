@@ -7,4 +7,4 @@ This is a simple Go-based API for managing blog posts. It provides basic CRUD (C
 - POST /api/blogs - Create a new blog post.
 - PUT /api/blogs/{id} - Update a specific blog post by ID.
 - DELETE /api/blogs/{id} - Delete a specific blog post by ID.
-
+- GET /api/blogs/category/{category} - Retrieve all blog posts by category.
